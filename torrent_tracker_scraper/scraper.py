@@ -314,6 +314,6 @@ class Scraper:
             if results.ready():
                 break
             time.sleep(0.3)
-        results = list(filter(lambda result: result != [], results.get()))
+        results = list(filter(lambda result: result is not None, results.get()))
 
         return results
